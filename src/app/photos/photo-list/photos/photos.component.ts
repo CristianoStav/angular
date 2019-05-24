@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, SimpleChange, SimpleChanges } from '@angular/core';
+import { Component, OnInit, Input, SimpleChange, SimpleChanges, OnChanges } from '@angular/core';
 import { Photo } from '../../photo/photo';
 
 @Component({
@@ -6,7 +6,7 @@ import { Photo } from '../../photo/photo';
   templateUrl: './photos.component.html',
   styleUrls: ['./photos.component.css']
 })
-export class PhotosComponent implements OnInit {
+export class PhotosComponent implements OnChanges {
 
   @Input() photos: Photo[] = [];
   rows: any[] = [];
